@@ -62,7 +62,7 @@ def post(id):
 @app.route('/login', methods=['GET', 'POST'])
 def login():
     if current_user.is_authenticated:
-        # app.logger.info('admin user logged in successfull - is_authenticated.')
+        app.logger.info('admin user logged in successfull - is_authenticated.')
         return redirect(url_for('home'))
     form = LoginForm()
     if form.validate_on_submit():
@@ -72,9 +72,6 @@ def login():
             # added by me
             app.logger.critical('Invalid login attemp')
             return redirect(url_for('login'))
-        # the next 3 lines added by me
-        else:
-            app.Logger.info('\'admin\' user logged in successfuly.')
         login_user(user, remember=form.remember_me.data)
         next_page = request.args.get('next')
         if not next_page or url_parse(next_page).netloc != '':
@@ -89,6 +86,7 @@ def authorized():
     if request.args.get('state') != session.get("state"):
         return redirect(url_for("home"))  # No-OP. Goes back to Index page
     if "error" in request.args:  # Authentication/Authorization failure
+
         return render_template("auth_error.html", result=request.args)
     if request.args.get('code'):
         cache = _load_cache()
