@@ -3,10 +3,10 @@ import os
 basedir = os.path.abspath(os.path.dirname(__file__))
 
 class Config(object):
-    SECRET_KEY = os.environ.get('SECRET_KEY') or 'secret-key'
+    SECRET_KEY = os.environ.get('SECRET_KEY') or 'T0U7rE.oh.6hj_-8EW_IQDW-8~oI4PpeNt'
 
     BLOB_ACCOUNT = os.environ.get('BLOB_ACCOUNT') or 'ndproj1sa'
-    BLOB_STORAGE_KEY = os.environ.get('BLOB_STORAGE_KEY') or 'oNSNaOVxp+FvJ+V+9941i05wWRckyivSpwv50mGIORv6msQyBPT7H4ryFlDEggJbG3wPy3fQvMkiNFH5cRP+VQ=='
+    BLOB_STORAGE_KEY = os.environ.get('BLOB_STORAGE_KEY') or 'M3Q5x7rAZxgZHg1WySdX9v6i3gn5VrDHJ8gt5GWv8hOIdwcc2cFlU/2GA/wQfH0T8YIRHVldirPgcKkSeLLdTQ=='
     BLOB_CONTAINER = os.environ.get('BLOB_CONTAINER') or 'images'
 
     SQL_SERVER = os.environ.get('SQL_SERVER') or 'nd-proj1-sqlsvr.database.windows.net'
@@ -30,7 +30,7 @@ class Config(object):
     AUTHORITY = "https://login.microsoftonline.com/common"  # For multi-tenant app, else put tenant name
     # AUTHORITY = "https://login.microsoftonline.com/Enter_the_Tenant_Name_Here"
 
-    CLIENT_ID = "ENTER_CLIENT_ID_HERE"
+    CLIENT_ID = "506ce1b6-f9a7-420c-9ead-aacabe84ab98"
 
     REDIRECT_PATH = "/getAToken"  # Used to form an absolute URL; must match to app's redirect_uri set in AAD
 
