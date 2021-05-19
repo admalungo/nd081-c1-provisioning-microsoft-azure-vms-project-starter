@@ -59,4 +59,4 @@ jobs:
         with:
           app-name: 'nd-proj1-wapp'
           slot-name: 'production'
-          publish-profile: ${{ secrets.AzureAppService_PublishProfile_07e8e3156c4e4877b78134adb02d0c1f }}
+          publish-profile: ${{ secrets.AzureAppService_PublishProfile_95f3c175170f48449a00c6d799a857ee }}
